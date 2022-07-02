@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Malayalam&family=Poppins&display=swap");
+@media (min-width: 800px) and (max-width: 850px) {
+	.navbar:not(.top-nav-collapse) {
+		background: #1c2331 !important;
+	}
+}
+.view,
+body {
+	height: 100%;
+	font-family: "Anek Malayalam", sans-serif;
+	font-family: "Poppins", sans-serif;
+}
+
+html {
+	height: 100%;
+}
+.navbar {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.page-footer,
+.top-nav-collapse {
+	background-color: #1c2331;
+}
+.text-color {
+	color: white;
+}
+.img-profile {
+	height: 300px;
+	width: 100%;
+	object-fit: cover;
+}
+@media only screen and (max-width: 768px) {
+	.navbar {
+		background-color: #1c2331;
+	}
+}
