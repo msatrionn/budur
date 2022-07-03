@@ -93,8 +93,8 @@ class Home extends CI_Controller {
         $this->pagination->initialize($config);
         $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
  
-		$data["wisata"]=$this->model->get_wisata('wisata')->result();
-        //panggil function get_mahasiswa_list yang ada pada mmodel mahasiswa_model. 
+		// $data["wisata"]=$this->model->get_wisata('wisata')->result();
+		
         $data['data'] = $this->model->get_post_list($config["per_page"], $data['page']);           
 		
         $data['pagination'] = $this->pagination->create_links();
@@ -132,6 +132,57 @@ class Home extends CI_Controller {
 		$this->load->view('pages/user/candi-detail',$data);
 		$this->load->view('layouts/footer');
 	}
-	
+	public function filter(){
+		$option	=$this->input->get('option');
+		$search	=$this->input->get('search');
+		if ($option == 'berita' && $search) {
+			$data["data"]=$this->model->get_filter_berita('berita',$search)->result();
+			if ($data["data"]==null) {
+				$data["null"]= "Tidak ada data ditemukan";
+			}
+			$this->load->view('layouts/header');
+			$this->load->view('pages/user/filter-berita',$data);
+			$this->load->view('layouts/footer');
+		}
+		elseif ($option == 'wisata' && $search) {
+			$data["wisata"]=$this->model->get_filter_wisata('wisata',$search)->result();
+			if ($data["wisata"]==null) {
+				$data["null"]= "Tidak ada data ditemukan";
+			}
+			$this->load->view('layouts/header');
+			$this->load->view('pages/user/wisata',$data);
+			$this->load->view('layouts/footer');
+		}
+		elseif ($option == 'candi' && $search) {
+			$data["candi"]=$this->model->get_filter_candi('candi',$search)->result();
+			if ($data["candi"]==null) {
+				$data["null"]= "Tidak ada data ditemukan";
+			}
+			$this->load->view('layouts/header');
+			$this->load->view('pages/user/candi',$data);
+			$this->load->view('layouts/footer');
+		}
+		elseif ($option == 'berita' && !$search) {
+			$data["data"]=$this->model->get_filter_berita('berita',$search)->result();
+			$this->load->view('layouts/header');
+			$this->load->view('pages/user/filter-berita',$data);
+			$this->load->view('layouts/footer');
+		}
+		elseif ($option == 'wisata' && !$search) {
+			$data["wisata"]=$this->model->get_filter_wisata('wisata',$search)->result();
+			$this->load->view('layouts/header');
+			$this->load->view('pages/user/wisata',$data);
+			$this->load->view('layouts/footer');
+		}
+		elseif ($option == 'candi' && !$search) {
+			$data["candi"]=$this->model->get_filter_candi('candi',$search)->result();
+			$this->load->view('layouts/header');
+			$this->load->view('pages/user/candi',$data);
+			$this->load->view('layouts/footer');
+		}
+		else{
+			echo 'data tidak ditemukan';
+		}
+	}
 }
 

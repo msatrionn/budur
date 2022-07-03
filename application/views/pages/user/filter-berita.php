@@ -1,9 +1,10 @@
-<section id="berita" style="margin-top: 100px; min-height: 80vh;"">
+<section id="berita" style="margin-top: 100px;min-height: 80vh;">
 	<h3 class="h3 text-center mb-5">Berita</h3>
 	<div class="container">
 		<div class="row wow fadeIn">
 			<div class="row" style="width: 100%;">
-					<?php foreach ($data->result()  as $key => $value) { ?>
+			<?= $null ?? "" ?>
+					<?php foreach ($data as $key => $value) { ?>
 						<div class="card mt-4 col-md-12" style="margin: 0 auto;">
 							<img id="img_size" class="card-img-top mt-3" src="<?= base_url('assets/file/berita/'.$value->gambar) ?>" alt="Card image cap">
 							<div class="card-body">
@@ -20,12 +21,6 @@
 							</div>
 						</div>
 					<?php } ?>
-				</div>
-				<div class="row mt-4" style="margin: 0 auto;">
-					<div class="col">
-						<!--Tampilkan pagination-->
-						<?php echo $pagination; ?>
-					</div>
 				</div>
 		</div>
 	</div>

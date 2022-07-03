@@ -3,6 +3,7 @@
 		Wisata
 	</h2>
 	<div class="row">
+	<?= $null ?? "" ?>
 		<?php
 		foreach ($wisata as $key => $value) {
 		?>

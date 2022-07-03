@@ -3,6 +3,7 @@
 		Candi
 	</h2>
 	<div class="row">
+		<?= $null ?? "" ?>
 		<?php
 		foreach ($candi as $key => $value) {
 		?>

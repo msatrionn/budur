@@ -7,18 +7,20 @@
       <!-- Content -->
 	  <div class="text-center white-text mx-5 wow fadeIn">
 		  <h2 style="color:white;margin-top:30%">Selamat Datang di Website Sistem Informasi Wisata <br>di Area Borobudur</h2>
-			<form action="" method="get">
+			<form action="<?= base_url('home/filter') ?>" method="get">
 				<div class=""  style="margin-top: 10%;">
 					<h3 class="text-center text-white">Apa yang anda cari ?</h3>
 					<div class="d-flex justify-content-center align-items-center mt-4">
 					<div class="row col-md-8 ">
 						<div class="col-md-5">
-							<select name="" id="" class="form-control">
-								<option value="">ccek</option>
+							<select name="option" id="" class="form-control">
+								<option value="berita">Berita</option>
+								<option value="wisata">Wisata</option>
+								<option value="candi">Candi</option>
 							</select>
 						</div>
 						<div class="col-md-6">
-							<input type="text" class="form-control">
+							<input type="text" name="search" class="form-control">
 						</div>
 						<div class="col-md-1">
 							<button class="btn btn-danger">Cari</button>

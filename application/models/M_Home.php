@@ -27,6 +27,26 @@ class M_Home extends CI_Model
         return $this->db->get($table);
     }
 
+    public function get_filter_berita($table,$data) {
+        return $this->db->query("select*from " ."$table"." 
+		where judul like  '%". $data ."%' 
+		or isi like  '%". $data ."%' ");
+    }
+
+    public function get_filter_wisata($table,$data) {
+        return $this->db->query("select*from " ."$table"." 
+		where nama_wisata like  '%". $data ."%' 
+		or deskripsi_wisata like  '%". $data ."%' 
+		or lokasi_wisata like  '%". $data ."%' ");
+    }
+
+    public function get_filter_candi($table,$data) {
+		return $this->db->query("select*from " ."$table"." 
+		where nama_candi like  '%". $data ."%' 
+		or sejarah like  '%". $data ."%' 
+		or alamat like  '%". $data ."%' ");
+    }
+
     public function get_authors($limit, $start) {
         $this->db->limit($limit, $start);
         $query = $this->db->get($this->table);
