@@ -50,13 +50,16 @@ class Home extends CI_Controller {
 		$data["wisata"] = $this->model_wisata->get_wisata('wisata')->result();
 
 		$data["candi"] = $this->model_candi->get_candi('candi')->result();
+
+		$data['profil']=$this->model->get_all('profil_candi')->row();
 		$this->load->view('layouts/header');
 		$this->load->view('pages/index',$data);
 		$this->load->view('layouts/footer');
 	}
 	public function about(){
+		$data['profil']=$this->model->get_all('profil_candi')->row();
 		$this->load->view('layouts/header');
-		$this->load->view('pages/user/tentang_borobudur');
+		$this->load->view('pages/user/tentang_borobudur',$data);
 		$this->load->view('layouts/footer');
 	}
 	public function berita(){

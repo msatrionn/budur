@@ -16,6 +16,15 @@
   <body>
 		<style>
 			@import url(https://fonts.googleapis.com/css?family=Raleway);
+			.wrapper-about{
+				text-align: justify;
+				max-height: 300px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				
+			}
 			#text-desc {
 				overflow: hidden;
 				text-overflow: ellipsis;

@@ -50,37 +50,25 @@
           <!--Grid column-->
           <div class="col-md-6 mb-4">
 
-            <img src="<?= base_url('assets/file/patung3.jpg') ?>" class="img-profile img-fluid z-depth-1-half" alt="">
+            <img src="<?= base_url('assets/file/profil/'.$profil->gambar) ?>" class="img-profile img-fluid z-depth-1-half" alt="">
 
           </div>
           <!--Grid column-->
 
           <!--Grid column-->
-          <div class="col-md-6 mb-4">
-            <!-- Main heading -->
-            <h3 class="h3 mb-3">Candi Borobudur</h3>
-            <p style="text-align:justify;" id="text-desc">Candi Borobudur melambangkan alam semesta. Dalam agama Buddha, 
-							semesta dibagi menjadi tiga tingkat yaitu kamadhatu (dunia keinginan), 
-							rupadhatu (dunia berbentuk) dan arupadhatu (dunia tak terbentuk). 
-							Ketiga tingkat ini dibedakan berdasarkan relief-relief candi. Relief ini dibentangkan sepanjang 3 meter. 
-							Terdapat 1.460 pigura yang diselingi bidang-bidang pemisah berjumlah sekitar 1.212 buah. 
-							Di atas deretan pigura terdapat semacam pelipit yang membujur, memanjang sejauh satu setengah kilometer. 
-							Pelipit ini dihias dan membentuk rangkaian bunga teratai. 
-							Di bagian tas terdapat hiasan simbar berbentuk segitiga berjumlah 1.476 buah. 
-							Tingkat kamadhatu dan rupadhatu terdapat 1.472 stupa dan 432 arca Buddha yang mengitari seluruh penjuru mata angin. 
-							Pada tingkat terakhir terdapat 72 buah stupa yang melingkari stupa induk di puncak. 
-							Dibutuhkan sekitar dua juta potongan batu untuk membangun monumen ini. 
-							Candi Borobudur secara keseluruhan terdiri dari stupa. 
-							Stupa adalah salah satu bangunan tanda peringatan agama Buddha. 
-							Dalam bahasa Sansekerta, stupa berarti gundukan atau timbunan tanah. 
-							Candi ini berada di Borobudur berada di daerah dataran Kedu yang dikelilingi oleh gunung Merapi dan Merbabu di sebelah Timur, 
-							Gunung Sindoro dan Sumbing di sebelah utara, dan pegunungan Menoreh di sebelah Selatan.
-						</p>
+          	<div class="col-md-6 mb-4 wrapper-about">
+				<!-- Main heading -->
+				<h3 class="h3 mb-3">Candi Borobudur</h3>
+				<p style="text-align:justify;" id="text-desc-about">
+					<?= $profil->profil_candi ?>
+				</p>
 
-            <hr>
-            <a href="<?= base_url('home/about') ?>" class="btn btn-primary btn-md">Lihat Lebih
-            </a>
-          </div>
+				<hr>
+			</div>
+			<div class="col-md-2">
+				<a href="<?= base_url('home/about') ?>" class="btn btn-primary btn-md">Lihat Lebih
+				</a>
+			</div>
         </div>
 
       </section>
