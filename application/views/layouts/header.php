@@ -124,7 +124,7 @@
 		<div class="container">
 
 		<!-- Brand -->
-		<a class="navbar-brand" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">
+		<a class="navbar-brand" href="#" target="_blank">
 			<strong>Borobudur</strong>
 		</a>
 
