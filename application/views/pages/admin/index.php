@@ -26,7 +26,7 @@
             <!-- Main heading -->
             <h3 class="h3 mb-3">Candi Borobudur</h3>
             <p style="text-align:justify;margin-bottom: 50px;">
-			<?= $post->profil_candi ?? "Belum ada" ?>
+						<?= $post->profil_candi ?? "Belum ada" ?>
 			</p>
       </section>
       <!--Section: More-->

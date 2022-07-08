@@ -21,7 +21,6 @@
       <section class="mt-5 wow fadeIn" id="profil">
 
       <h2 class="text-center py-4 my-4">Tentang Borobudur</h2>
-
             <!-- Main heading -->
             <h3 class="h3 mb-3">Candi Borobudur</h3>
             <p style="text-align:justify;margin-bottom: 50px;">
